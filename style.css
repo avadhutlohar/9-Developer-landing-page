@@ -8,6 +8,7 @@
 }
 body {
   background-color: #f8f8fa;
+  overflow-x: hidden;
 }
 
 /*--------------------- header section -----------------------*/
@@ -62,9 +63,60 @@ header div:last-child {
 header div .header-image {
   width: 100%;
 }
+@media only screen and (max-width: 1424px) {
+  header div:last-child {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 1292px) {
+  header .header-text h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 1099px) {
+  header .header-text h2 {
+    font-size: 1.4rem;
+  }
+  header div:last-child {
+    width: 400px;
+    top: 170px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  header {
+    justify-content: center; 
+    padding: 0 20px;
+  }
+  header div:last-child {
+    display: none;
+  }
+  nav {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  header div .logo {
+    order: 1;
+    margin-top: 50px;
+    width: 100px;
+    margin-right: 40px;
+  }
+  .header-text {
+    padding: 0 20px;
+  }
+  nav .nav-item-active {
+    background-color: #FFFFFF;
+    color: #4617fe;
+    padding: 5px 20px;
+    border-radius: 4px;
+    min-width: 50px;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+  }
+  
+}
+
 
 /*----------------------- companies --------------------*/
-
 .companies {
   display: flex;
   width: 700px;
@@ -78,6 +130,30 @@ header div .header-image {
   font-size: 1.6rem;
   font-family: "Righteous";
 }
+@media only screen and (max-width: 1292px) {
+  .companies {
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .companies .company-items {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 1099px) {
+  .companies .company-items {
+    font-size: 1rem;
+  }
+ }
+@media only screen and (max-width: 950px) {
+  .companies {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+    gap: 20px;
+  }
+
+}
+
 
 /*------------------- api section --------------------*/
 .api {
@@ -97,6 +173,7 @@ header div .header-image {
   gap: 20px;
   position: relative; 
   justify-content: center;
+  flex-wrap: wrap;
 }
 .api .cards .card-active {
   background-color: #FFFFFF;
@@ -133,7 +210,17 @@ header div .header-image {
   align-items: center;
   font-size: 2rem;
  }
-
+@media only screen and (max-width: 925px) {
+  .card:last-child::after {
+    display: none;
+  }
+  .api {
+    padding: 0 20px;
+  }
+  .api .api-heading {
+    font-size: 2.4rem;
+  }
+}
 
 
  /*----------------------- Blog section -----------------------*/
@@ -154,6 +241,7 @@ header div .header-image {
   margin-right: auto;
   display: flex;
   margin-top: 24px;
+  flex-wrap: wrap;
  }
  .blog-card {
   background-color: #FFFFFF;
@@ -212,6 +300,40 @@ header div .header-image {
   font-weight: 900;
  }
 
+
+ @media only screen and (max-width: 950px) {
+    .blog-cards {
+      gap: 40px;
+    }
+    .blog-card {
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .blog-image {
+      width: 100px;
+     }
+     .blog-image img {
+      width: 100%;
+     }
+     .blog-content {
+      padding: 10px 30px 20px 30px;
+     }
+     .blog-bottom {
+      left: 0px;
+      bottom: -20px;
+    }
+    div.blog-author {
+      left: 0;
+      bottom: -40px;
+     }
+     .blog-heading {
+      padding: 0 20px;
+     }
+     .blog-heading h1 {
+        font-size: 2.2rem;
+     }
+ }
+
  
  /*------------------- Faq section -------------------*/
  .faq-section {
@@ -251,6 +373,35 @@ header div .header-image {
     border-radius: 4px;
  }
 
+ @media only screen and (max-width: 1256px) {
+  .faq-section .faq-content {
+    position: relative;
+    z-index: 2;
+  }
+  .faq-section .faq-image {
+    opacity: .1;
+    z-index: 1;
+  }
+ }
+ @media only screen and (max-width: 925px) {
+  .faq-section .faq-content h2 {
+    font-size: 2rem;
+    line-height: 40px;
+  
+   }
+   .faq-section {
+    padding: 20px 20px;
+   }
+   .faq-section .faq-content h4 {
+    font-size: 12px;
+    padding-top: 15px;
+   }
+   .faq-section .faq-content h2 ~ h4:not(:first-of-type) {
+    font-size: 1rem;
+    padding-top: 34px;
+   }
+ }
+
 
 /*-------------------- Download section --------------------*/
 
@@ -261,6 +412,7 @@ header div .header-image {
   height: 300px;
   background-color: #FFFFFF;
   align-items: center;
+  flex-wrap: wrap;
 }
 .download-section .download-content span {
   font-weight: 100;
@@ -292,6 +444,21 @@ header div .header-image {
   border-radius: 50px;
 }
 
+@media only screen and (max-width: 1047px) {
+  .download-section .download-email {
+    position: relative;
+  }
+  .download-section {
+    padding: 0 10px;
+  }
+  .download-section .download-email form input {
+    display: block;
+    padding: 15px 10px 15px 10px;
+  }
+  .download-section .download-email form button {
+    display: none;
+  }
+}
 
 /*------------------- footer section ----------------------*/
 
@@ -302,6 +469,7 @@ header div .header-image {
   padding: 20px 90px;
   align-items: center;
   height: 200px;
+  flex-wrap: wrap;
 }
 
 .footer-section .footer-left .list {
@@ -346,4 +514,14 @@ header div .header-image {
   margin-left: 20px;
   display: inline-block;
   background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 670px) {
+  .footer-section .footer-left .list {
+    flex-direction: column;
+}
+.footer-section {
+  height: auto;
+  padding: 40px 20px;
+}
 }
